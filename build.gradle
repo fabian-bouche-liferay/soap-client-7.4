@@ -1,0 +1,3 @@
+// Check GETTING_STARTED.markdown for information regarding usage.
+String gradleVersion = "7.6.3"
+String gradleDistributionURL = "https://services.gradle.org/distributions/gradle-7.6.3-bin.zip"

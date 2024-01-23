@@ -1,0 +1,7 @@
+Bundle-Name: soap-client
+Bundle-SymbolicName: com.liferay.samples.fbo.soap.client
+Bundle-Version: 1.0.0
+
+Import-Package:\
+	org.apache.cxf.jaxws.spi,\
+	*
