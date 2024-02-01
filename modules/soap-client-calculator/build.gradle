@@ -1,0 +1,25 @@
+plugins {
+    id("com.github.bjornvester.wsdl2java") version "2.0.2"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java' // standard source directory
+            srcDir 'src/generated/wsdl2java' // your generated code directory
+        }
+    }
+}
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "org.apache.cxf", name: "cxf-rt-frontend-jaxws", version: "3.4.10"
+}
+
+wsdl2java {
+    cxfVersion.set("3.4.10")
+    useJakarta.set(false)
+    markGenerated.set(true)
+    generatedSourceDir.set(layout.projectDirectory.dir("src/generated/wsdl2java"))
+	generatedStyle.set("jdk8")
+}
